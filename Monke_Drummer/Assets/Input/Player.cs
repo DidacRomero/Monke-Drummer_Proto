@@ -43,10 +43,26 @@ public class @Player_Controls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""MIDI"",
-                    ""type"": ""Button"",
+                    ""name"": ""MIDI_Kick"",
+                    ""type"": ""Value"",
                     ""id"": ""767ea3df-370e-41ce-932b-0c34f77f0e0e"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MIDI_Snare"",
+                    ""type"": ""Value"",
+                    ""id"": ""ba4e4627-f0cc-4728-9d69-368fbbdc644d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MIDI_hi-hat"",
+                    ""type"": ""Value"",
+                    ""id"": ""c7a2b21d-0d61-4dc7-94b8-1e295df9f701"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -275,22 +291,33 @@ public class @Player_Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""88ff8e13-01d3-427f-9a39-235eeb3a2e7d"",
-                    ""path"": ""<MidiDevice>/note060"",
+                    ""path"": ""<MidiDevice>/note048"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MIDI"",
+                    ""action"": ""MIDI_Kick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""2635ea8b-a977-4a96-9177-d6210ac5c4d5"",
-                    ""path"": ""<Keyboard>/1"",
+                    ""id"": ""6c31c365-df67-4258-8e2f-5a46287d4b8a"",
+                    ""path"": ""<MidiDevice>/note049"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MIDI"",
+                    ""action"": ""MIDI_Snare"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8fd00ce4-0bb4-4740-8987-1cbd1e3933ff"",
+                    ""path"": ""<MidiDevice>/note051"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MIDI_hi-hat"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -909,7 +936,9 @@ public class @Player_Controls : IInputActionCollection, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
-        m_Player_MIDI = m_Player.FindAction("MIDI", throwIfNotFound: true);
+        m_Player_MIDI_Kick = m_Player.FindAction("MIDI_Kick", throwIfNotFound: true);
+        m_Player_MIDI_Snare = m_Player.FindAction("MIDI_Snare", throwIfNotFound: true);
+        m_Player_MIDI_hihat = m_Player.FindAction("MIDI_hi-hat", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -977,7 +1006,9 @@ public class @Player_Controls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Fire;
-    private readonly InputAction m_Player_MIDI;
+    private readonly InputAction m_Player_MIDI_Kick;
+    private readonly InputAction m_Player_MIDI_Snare;
+    private readonly InputAction m_Player_MIDI_hihat;
     public struct PlayerActions
     {
         private @Player_Controls m_Wrapper;
@@ -985,7 +1016,9 @@ public class @Player_Controls : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
-        public InputAction @MIDI => m_Wrapper.m_Player_MIDI;
+        public InputAction @MIDI_Kick => m_Wrapper.m_Player_MIDI_Kick;
+        public InputAction @MIDI_Snare => m_Wrapper.m_Player_MIDI_Snare;
+        public InputAction @MIDI_hihat => m_Wrapper.m_Player_MIDI_hihat;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1004,9 +1037,15 @@ public class @Player_Controls : IInputActionCollection, IDisposable
                 @Fire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
                 @Fire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnFire;
-                @MIDI.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI;
-                @MIDI.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI;
-                @MIDI.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI;
+                @MIDI_Kick.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI_Kick;
+                @MIDI_Kick.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI_Kick;
+                @MIDI_Kick.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI_Kick;
+                @MIDI_Snare.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI_Snare;
+                @MIDI_Snare.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI_Snare;
+                @MIDI_Snare.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI_Snare;
+                @MIDI_hihat.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI_hihat;
+                @MIDI_hihat.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI_hihat;
+                @MIDI_hihat.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI_hihat;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1020,9 +1059,15 @@ public class @Player_Controls : IInputActionCollection, IDisposable
                 @Fire.started += instance.OnFire;
                 @Fire.performed += instance.OnFire;
                 @Fire.canceled += instance.OnFire;
-                @MIDI.started += instance.OnMIDI;
-                @MIDI.performed += instance.OnMIDI;
-                @MIDI.canceled += instance.OnMIDI;
+                @MIDI_Kick.started += instance.OnMIDI_Kick;
+                @MIDI_Kick.performed += instance.OnMIDI_Kick;
+                @MIDI_Kick.canceled += instance.OnMIDI_Kick;
+                @MIDI_Snare.started += instance.OnMIDI_Snare;
+                @MIDI_Snare.performed += instance.OnMIDI_Snare;
+                @MIDI_Snare.canceled += instance.OnMIDI_Snare;
+                @MIDI_hihat.started += instance.OnMIDI_hihat;
+                @MIDI_hihat.performed += instance.OnMIDI_hihat;
+                @MIDI_hihat.canceled += instance.OnMIDI_hihat;
             }
         }
     }
@@ -1215,7 +1260,9 @@ public class @Player_Controls : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
-        void OnMIDI(InputAction.CallbackContext context);
+        void OnMIDI_Kick(InputAction.CallbackContext context);
+        void OnMIDI_Snare(InputAction.CallbackContext context);
+        void OnMIDI_hihat(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

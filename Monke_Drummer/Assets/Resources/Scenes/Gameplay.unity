@@ -425,6 +425,141 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_ActionId
+      value: ba4e4627-f0cc-4728-9d69-368fbbdc644d
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_ActionId
+      value: c7a2b21d-0d61-4dc7-94b8-1e295df9f701
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_ActionName
+      value: Player/MIDI_Snare[/MidiDevice/note049]
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_ActionName
+      value: Player/MIDI_hi-hat[/MidiDevice/note051]
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1618992952}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1618992952}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1618992952}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1618992952}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MIDI_Kick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MIDI_Kick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MIDI_Snare
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MIDI_hihat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[13].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Player_Movement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[14].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Player_Movement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Player_Movement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Player_Movement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[15].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954688, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4304363998666954691, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
         type: 3}
       propertyPath: m_Constraints
@@ -767,6 +902,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1618992952 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4304363998666954693, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+    type: 3}
+  m_PrefabInstance: {fileID: 1161697715}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e4d041c632bea419c7d3075e9c5f40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1883420949
 GameObject:
   m_ObjectHideFlags: 0
