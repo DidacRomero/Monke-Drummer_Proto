@@ -14,6 +14,12 @@ public class Player_Movement : MonoBehaviour
     [SerializeField]
     private Vector2 movement;
 
+    [FMODUnity.EventRef]
+    public string KickEvent = "";
+
+    [FMODUnity.EventRef]
+    public string SnareEvent = "";
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -51,7 +57,13 @@ public class Player_Movement : MonoBehaviour
         {
             Debug.Log("Vertical Movement");
             movement = jump_force*mov;
-        }
+
+            if(mov == Vector2.up)
+                FMODUnity.RuntimeManager.PlayOneShot(KickEvent, transform.position);
+            else
+                FMODUnity.RuntimeManager.PlayOneShot(SnareEvent, transform.position);
+
+            }
     }
 
     public void MIDI_Kick(InputAction.CallbackContext context)
@@ -67,6 +79,7 @@ public class Player_Movement : MonoBehaviour
             {
                 Debug.Log("Vertical Movement");
                 movement = Vector2.up * jump_force * mov;
+                FMODUnity.RuntimeManager.PlayOneShot(KickEvent, transform.position);
             }
         }
            
@@ -85,6 +98,8 @@ public class Player_Movement : MonoBehaviour
             {
                 Debug.Log("Vertical Movement");
                 movement = Vector2.down * jump_force * mov;
+                FMODUnity.RuntimeManager.PlayOneShot(SnareEvent, transform.position);
+
             }
         }
     }
