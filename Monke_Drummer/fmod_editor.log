@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000021BB9D10868 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002D0210A8478 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -21,39 +21,39 @@
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1595872
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 4928
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 6304
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DB51EFF528
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DABE4CF4F8
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB63A97EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB63A97E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB63A97F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB63A98050
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000021BBA9E06B8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB53B87EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB53B87E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB53B87F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB53B88050
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002D0B1FFA528
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='bombo2', format=5, channels=1, frequency=48000, lengthbytes=9248, lengthpcm=59679, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.988871.
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 1595872
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 4928
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 6304
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DB51EFF528
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000DABE4CF4F8
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB63A97EC0
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB63A97E90
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB63A97F90
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB63A98050
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000021C1FE1F6D8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB53B87EC0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB53B87E90
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB53B87F90
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB53B88050
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000002D026939818
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='caixes-003', format=5, channels=2, frequency=48000, lengthbytes=16352, lengthpcm=136783, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.473671.
-[LOG] SoundI::release                          :  (0000021C20ADA708)
-[LOG] SoundI::release                          :     bombo2 (0000021BBDAFC0F8)
-[LOG] SoundI::release                          :  (00000219F95295F8)
-[LOG] SoundI::release                          :     caixes-003 (0000021BBDAFBA78)
+[LOG] SoundI::release                          :  (000002D08CA1C798)
+[LOG] SoundI::release                          :     bombo2 (000002CE4539D5D8)
+[LOG] SoundI::release                          :  (000002D08CA210E8)
+[LOG] SoundI::release                          :     caixes-003 (000002CE4539D918)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients

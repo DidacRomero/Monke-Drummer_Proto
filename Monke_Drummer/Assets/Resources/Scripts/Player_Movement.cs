@@ -17,8 +17,12 @@ public class Player_Movement : MonoBehaviour
     [FMODUnity.EventRef]
     public string KickEvent = "";
 
+    [FMODUnity.ParamRef]
+    public string KickVelocity = "";
+
     [FMODUnity.EventRef]
     public string SnareEvent = "";
+
 
     private void Awake()
     {
@@ -71,15 +75,21 @@ public class Player_Movement : MonoBehaviour
         //Testing MIDI Input
         Debug.Log("Kick");
 
-        float mov = context.ReadValue<float>();
+        float vel = context.ReadValue<float>();
 
         if (context.performed)
         {
-            if (mov > 0.0f)
+            if (vel > 0.0f)
             {
                 Debug.Log("Vertical Movement");
-                movement = Vector2.up * jump_force * mov;
-                FMODUnity.RuntimeManager.PlayOneShot(KickEvent, transform.position);
+                movement = Vector2.up * jump_force * vel;
+                //FMODUnity.RuntimeManager.PlayOneShot(KickEvent, transform.position);
+                //KickVelocity.
+                FMOD.Studio.EventInstance kick = FMODUnity.RuntimeManager.CreateInstance(KickEvent);
+                kick.setParameterByName("Velocity", vel);
+                kick.start();
+                kick.release();
+                Debug.Log("Velocity: " + vel);
             }
         }
            
@@ -90,16 +100,21 @@ public class Player_Movement : MonoBehaviour
         //Testing MIDI Input
         Debug.Log("Snare");
 
-        float mov = context.ReadValue<float>();
+        float vel = context.ReadValue<float>();
 
         if (context.performed)
         {
-            if (mov > 0.0f)
+            if (vel > 0.0f)
             {
                 Debug.Log("Vertical Movement");
-                movement = Vector2.down * jump_force * mov;
+                movement = Vector2.down * jump_force * vel;
                 FMODUnity.RuntimeManager.PlayOneShot(SnareEvent, transform.position);
 
+                FMOD.Studio.EventInstance kick = FMODUnity.RuntimeManager.CreateInstance(SnareEvent);
+                kick.setParameterByName("Velocity", vel);
+                kick.start();
+                kick.release();
+                Debug.Log("Velocity: " + vel);
             }
         }
     }
