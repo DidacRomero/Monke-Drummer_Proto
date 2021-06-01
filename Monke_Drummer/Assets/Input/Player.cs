@@ -65,6 +65,38 @@ public class @Player_Controls : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Select_Up"",
+                    ""type"": ""Button"",
+                    ""id"": ""7494027c-54d7-4a0d-b2ac-3dbfe241b732"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Select_Down"",
+                    ""type"": ""Button"",
+                    ""id"": ""e196877b-4d09-4d96-a583-617761e352d6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Select_Right"",
+                    ""type"": ""Button"",
+                    ""id"": ""a5fb6b61-c58b-4229-8f28-e37ca8c76be4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Select_Left"",
+                    ""type"": ""Button"",
+                    ""id"": ""324f1e19-193e-4d55-925f-19659c05b4df"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -102,31 +134,9 @@ public class @Player_Controls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""up"",
-                    ""id"": ""8180e8bd-4097-4f4e-ab88-4523101a6ce9"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": ""down"",
                     ""id"": ""320bffee-a40b-4347-ac70-c210eb8bc73a"",
                     ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""1c5327b5-f71c-4f60-99c7-4e737386f1d1"",
-                    ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
@@ -146,31 +156,9 @@ public class @Player_Controls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""left"",
-                    ""id"": ""2e46982e-44cc-431b-9f0b-c11910bf467a"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": ""right"",
                     ""id"": ""fcfe95b8-67b9-4526-84b5-5d0bc98d6400"",
                     ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""77bff152-3580-4b21-b6de-dcd0c7e41164"",
-                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
@@ -318,6 +306,50 @@ public class @Player_Controls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""MIDI_hi-hat"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b994a19f-20d2-45cf-be03-5e6eee17b34b"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Select_Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9c630825-d7a2-426d-986f-7115f58190cf"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Select_Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e9b7a256-8513-4507-b07c-aa7260036caf"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Select_Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1bb53dfa-11c3-4c02-8ef3-553ab6292cd1"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Select_Left"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -866,6 +898,74 @@ public class @Player_Controls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Keyboard"",
+            ""id"": ""9c52ec2b-46a8-4580-8bf0-187ad8fcd14d"",
+            ""actions"": [
+                {
+                    ""name"": ""Master_tracks"",
+                    ""type"": ""Button"",
+                    ""id"": ""9d13b018-0f77-41f1-82f8-9b774f7d0163"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Track_Selector"",
+                    ""type"": ""Button"",
+                    ""id"": ""78fa15a9-3afd-4456-acce-95cf5ef448e6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""435ca0fc-3846-4645-8c87-072da903f668"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Master_tracks"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""99063f32-993b-4e1c-b693-e2391c258677"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Master_tracks"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d5569239-6e58-45e8-94a0-abe5122e82ea"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Track_Selector"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0791bcd8-be58-418c-95e6-29d911d4c9d9"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Track_Selector"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -939,6 +1039,10 @@ public class @Player_Controls : IInputActionCollection, IDisposable
         m_Player_MIDI_Kick = m_Player.FindAction("MIDI_Kick", throwIfNotFound: true);
         m_Player_MIDI_Snare = m_Player.FindAction("MIDI_Snare", throwIfNotFound: true);
         m_Player_MIDI_hihat = m_Player.FindAction("MIDI_hi-hat", throwIfNotFound: true);
+        m_Player_Select_Up = m_Player.FindAction("Select_Up", throwIfNotFound: true);
+        m_Player_Select_Down = m_Player.FindAction("Select_Down", throwIfNotFound: true);
+        m_Player_Select_Right = m_Player.FindAction("Select_Right", throwIfNotFound: true);
+        m_Player_Select_Left = m_Player.FindAction("Select_Left", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -954,6 +1058,10 @@ public class @Player_Controls : IInputActionCollection, IDisposable
         // MIDI
         m_MIDI = asset.FindActionMap("MIDI", throwIfNotFound: true);
         m_MIDI_C4 = m_MIDI.FindAction("C4", throwIfNotFound: true);
+        // Keyboard
+        m_Keyboard = asset.FindActionMap("Keyboard", throwIfNotFound: true);
+        m_Keyboard_Master_tracks = m_Keyboard.FindAction("Master_tracks", throwIfNotFound: true);
+        m_Keyboard_Track_Selector = m_Keyboard.FindAction("Track_Selector", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1009,6 +1117,10 @@ public class @Player_Controls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_MIDI_Kick;
     private readonly InputAction m_Player_MIDI_Snare;
     private readonly InputAction m_Player_MIDI_hihat;
+    private readonly InputAction m_Player_Select_Up;
+    private readonly InputAction m_Player_Select_Down;
+    private readonly InputAction m_Player_Select_Right;
+    private readonly InputAction m_Player_Select_Left;
     public struct PlayerActions
     {
         private @Player_Controls m_Wrapper;
@@ -1019,6 +1131,10 @@ public class @Player_Controls : IInputActionCollection, IDisposable
         public InputAction @MIDI_Kick => m_Wrapper.m_Player_MIDI_Kick;
         public InputAction @MIDI_Snare => m_Wrapper.m_Player_MIDI_Snare;
         public InputAction @MIDI_hihat => m_Wrapper.m_Player_MIDI_hihat;
+        public InputAction @Select_Up => m_Wrapper.m_Player_Select_Up;
+        public InputAction @Select_Down => m_Wrapper.m_Player_Select_Down;
+        public InputAction @Select_Right => m_Wrapper.m_Player_Select_Right;
+        public InputAction @Select_Left => m_Wrapper.m_Player_Select_Left;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1046,6 +1162,18 @@ public class @Player_Controls : IInputActionCollection, IDisposable
                 @MIDI_hihat.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI_hihat;
                 @MIDI_hihat.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI_hihat;
                 @MIDI_hihat.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMIDI_hihat;
+                @Select_Up.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect_Up;
+                @Select_Up.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect_Up;
+                @Select_Up.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect_Up;
+                @Select_Down.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect_Down;
+                @Select_Down.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect_Down;
+                @Select_Down.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect_Down;
+                @Select_Right.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect_Right;
+                @Select_Right.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect_Right;
+                @Select_Right.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect_Right;
+                @Select_Left.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect_Left;
+                @Select_Left.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect_Left;
+                @Select_Left.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSelect_Left;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1068,6 +1196,18 @@ public class @Player_Controls : IInputActionCollection, IDisposable
                 @MIDI_hihat.started += instance.OnMIDI_hihat;
                 @MIDI_hihat.performed += instance.OnMIDI_hihat;
                 @MIDI_hihat.canceled += instance.OnMIDI_hihat;
+                @Select_Up.started += instance.OnSelect_Up;
+                @Select_Up.performed += instance.OnSelect_Up;
+                @Select_Up.canceled += instance.OnSelect_Up;
+                @Select_Down.started += instance.OnSelect_Down;
+                @Select_Down.performed += instance.OnSelect_Down;
+                @Select_Down.canceled += instance.OnSelect_Down;
+                @Select_Right.started += instance.OnSelect_Right;
+                @Select_Right.performed += instance.OnSelect_Right;
+                @Select_Right.canceled += instance.OnSelect_Right;
+                @Select_Left.started += instance.OnSelect_Left;
+                @Select_Left.performed += instance.OnSelect_Left;
+                @Select_Left.canceled += instance.OnSelect_Left;
             }
         }
     }
@@ -1210,6 +1350,47 @@ public class @Player_Controls : IInputActionCollection, IDisposable
         }
     }
     public MIDIActions @MIDI => new MIDIActions(this);
+
+    // Keyboard
+    private readonly InputActionMap m_Keyboard;
+    private IKeyboardActions m_KeyboardActionsCallbackInterface;
+    private readonly InputAction m_Keyboard_Master_tracks;
+    private readonly InputAction m_Keyboard_Track_Selector;
+    public struct KeyboardActions
+    {
+        private @Player_Controls m_Wrapper;
+        public KeyboardActions(@Player_Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Master_tracks => m_Wrapper.m_Keyboard_Master_tracks;
+        public InputAction @Track_Selector => m_Wrapper.m_Keyboard_Track_Selector;
+        public InputActionMap Get() { return m_Wrapper.m_Keyboard; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(KeyboardActions set) { return set.Get(); }
+        public void SetCallbacks(IKeyboardActions instance)
+        {
+            if (m_Wrapper.m_KeyboardActionsCallbackInterface != null)
+            {
+                @Master_tracks.started -= m_Wrapper.m_KeyboardActionsCallbackInterface.OnMaster_tracks;
+                @Master_tracks.performed -= m_Wrapper.m_KeyboardActionsCallbackInterface.OnMaster_tracks;
+                @Master_tracks.canceled -= m_Wrapper.m_KeyboardActionsCallbackInterface.OnMaster_tracks;
+                @Track_Selector.started -= m_Wrapper.m_KeyboardActionsCallbackInterface.OnTrack_Selector;
+                @Track_Selector.performed -= m_Wrapper.m_KeyboardActionsCallbackInterface.OnTrack_Selector;
+                @Track_Selector.canceled -= m_Wrapper.m_KeyboardActionsCallbackInterface.OnTrack_Selector;
+            }
+            m_Wrapper.m_KeyboardActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Master_tracks.started += instance.OnMaster_tracks;
+                @Master_tracks.performed += instance.OnMaster_tracks;
+                @Master_tracks.canceled += instance.OnMaster_tracks;
+                @Track_Selector.started += instance.OnTrack_Selector;
+                @Track_Selector.performed += instance.OnTrack_Selector;
+                @Track_Selector.canceled += instance.OnTrack_Selector;
+            }
+        }
+    }
+    public KeyboardActions @Keyboard => new KeyboardActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -1263,6 +1444,10 @@ public class @Player_Controls : IInputActionCollection, IDisposable
         void OnMIDI_Kick(InputAction.CallbackContext context);
         void OnMIDI_Snare(InputAction.CallbackContext context);
         void OnMIDI_hihat(InputAction.CallbackContext context);
+        void OnSelect_Up(InputAction.CallbackContext context);
+        void OnSelect_Down(InputAction.CallbackContext context);
+        void OnSelect_Right(InputAction.CallbackContext context);
+        void OnSelect_Left(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
@@ -1280,5 +1465,10 @@ public class @Player_Controls : IInputActionCollection, IDisposable
     public interface IMIDIActions
     {
         void OnC4(InputAction.CallbackContext context);
+    }
+    public interface IKeyboardActions
+    {
+        void OnMaster_tracks(InputAction.CallbackContext context);
+        void OnTrack_Selector(InputAction.CallbackContext context);
     }
 }
