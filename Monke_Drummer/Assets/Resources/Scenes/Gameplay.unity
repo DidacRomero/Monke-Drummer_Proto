@@ -1418,6 +1418,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Track_Selection
       objectReference: {fileID: 0}
+    - target: {fileID: 5177047859177414349, guid: 90bd53bfbbaa90b46932a7d12f3fd001,
+        type: 3}
+      propertyPath: item1
+      value: Melodia 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177047859177414349, guid: 90bd53bfbbaa90b46932a7d12f3fd001,
+        type: 3}
+      propertyPath: item2
+      value: Melodia 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177047859177414349, guid: 90bd53bfbbaa90b46932a7d12f3fd001,
+        type: 3}
+      propertyPath: item3
+      value: Melodia 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177047859177414349, guid: 90bd53bfbbaa90b46932a7d12f3fd001,
+        type: 3}
+      propertyPath: TrackEvent
+      value: event:/Music/MD_Music_Melody
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90bd53bfbbaa90b46932a7d12f3fd001, type: 3}
 --- !u!224 &1824591117 stripped
@@ -1542,6 +1562,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Track_Selection
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177047859177414349, guid: 90bd53bfbbaa90b46932a7d12f3fd001,
+        type: 3}
+      propertyPath: item1
+      value: Baix 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177047859177414349, guid: 90bd53bfbbaa90b46932a7d12f3fd001,
+        type: 3}
+      propertyPath: item2
+      value: Baix 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177047859177414349, guid: 90bd53bfbbaa90b46932a7d12f3fd001,
+        type: 3}
+      propertyPath: item3
+      value: Baix 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177047859177414349, guid: 90bd53bfbbaa90b46932a7d12f3fd001,
+        type: 3}
+      propertyPath: TrackEvent
+      value: event:/Music/MD_Music_Bass
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90bd53bfbbaa90b46932a7d12f3fd001, type: 3}
@@ -1841,6 +1881,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Track_Selection
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177047859177414349, guid: 90bd53bfbbaa90b46932a7d12f3fd001,
+        type: 3}
+      propertyPath: TrackEvent
+      value: event:/Music/MD_Music_Harmony
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90bd53bfbbaa90b46932a7d12f3fd001, type: 3}

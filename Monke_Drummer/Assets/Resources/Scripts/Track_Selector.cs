@@ -16,6 +16,15 @@ public class Track_Selector : MonoBehaviour
     [SerializeField]
     private uint item = 0;
 
+    [FMODUnity.EventRef]
+    public string TrackEvent = "";
+
+    FMOD.Studio.EventInstance track;
+
+    float initial_time;
+    float Timer = 0.0f;
+    bool timerset = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,15 +37,38 @@ public class Track_Selector : MonoBehaviour
         }
 
         item_txt = GetComponentInChildren<Text>();  //Display text will always be the first child with a text component
+
+        if (TrackEvent != "")
+        {
+            track = FMODUnity.RuntimeManager.CreateInstance(TrackEvent);
+            track.setParameterByName("Harmony", 1);
+            track.start();
+            initial_time = Time.realtimeSinceStartup;
+            track.release();
+        }
+        //Debug.Log("Velocity: " + vel);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
         if(item < items_list.Count)
         {
             item_txt.text = items_list[(int)item];
+        }
+        if(timerset == false)
+        {
+            Timer += Time.realtimeSinceStartup - initial_time;
+            timerset = true;
+        }
+
+        Timer += Time.deltaTime;
+
+
+        if (Timer >= 11.8f/*0.75 * 15*/)
+        {
+            track.setParameterByName("Harmony", item);
+            Timer = 0;
         }
     }
 

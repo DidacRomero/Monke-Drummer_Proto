@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{16412412-f47b-45a3-841a-19b5c84d84ee}">
+		<property name="assetPath">
+			<value>Baix_Electronic.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>12</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fefc9fd5-287d-4dc7-ba08-4b13fd09099c}</destination>
+		</relationship>
+	</object>
+</objects>
