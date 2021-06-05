@@ -11,6 +11,11 @@ public class UI_Manager : MonoBehaviour
         
     }
 
+    private void OnDestroy()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {

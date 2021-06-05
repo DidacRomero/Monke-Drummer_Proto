@@ -23,6 +23,12 @@ public class Player_Movement : MonoBehaviour
     [FMODUnity.EventRef]
     public string SnareEvent = "";
 
+    [FMODUnity.EventRef]
+    public string HiHatEvent = "";
+
+    public int max_jumps = 3;
+    int jumps = 0;
+
 
     private void Awake()
     {
@@ -38,7 +44,10 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Keyboard.current.uKey.wasPressedThisFrame == true)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(HiHatEvent, transform.position);
+        }
     }
     private void FixedUpdate()
     {
@@ -60,12 +69,22 @@ public class Player_Movement : MonoBehaviour
         if(mov == Vector2.up || mov == Vector2.down)
         {
             Debug.Log("Vertical Movement");
-            movement = jump_force*mov;
 
-            if(mov == Vector2.up)
-                FMODUnity.RuntimeManager.PlayOneShot(KickEvent, transform.position);
-            else
-                FMODUnity.RuntimeManager.PlayOneShot(SnareEvent, transform.position);
+                if (mov == Vector2.up)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot(KickEvent, transform.position);
+                    if (jumps < max_jumps)
+                    {
+                        jumps++;
+                        movement = jump_force * mov;
+                    }
+                }
+                else
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot(SnareEvent, transform.position);
+
+                    movement = jump_force * mov;
+                }
 
             }
     }
@@ -82,7 +101,11 @@ public class Player_Movement : MonoBehaviour
             if (vel > 0.0f)
             {
                 Debug.Log("Vertical Movement");
-                movement = Vector2.up * jump_force * vel;
+                if(jumps < max_jumps)
+                {
+                    movement = Vector2.up * jump_force * vel;
+                    jumps++;
+                }
                 //FMODUnity.RuntimeManager.PlayOneShot(KickEvent, transform.position);
                 //KickVelocity.
                 FMOD.Studio.EventInstance kick = FMODUnity.RuntimeManager.CreateInstance(KickEvent);
@@ -124,17 +147,31 @@ public class Player_Movement : MonoBehaviour
         //Testing MIDI Input
         Debug.Log("Hi-Hat");
 
-        float mov = context.ReadValue<float>();
+        float vel = context.ReadValue<float>();
+
+        if (context.performed)
+        {
+            if (vel > 0.0f)
+            {
+                Debug.Log("Vertical Movement");
+
+                FMOD.Studio.EventInstance hihat = FMODUnity.RuntimeManager.CreateInstance(HiHatEvent);
+                hihat.setParameterByName("Velocity", vel);
+                hihat.start();
+                hihat.release();
+                Debug.Log("Velocity: " + vel);
+            }
+        }
 
     }
-
-
-
 
     private bool IsGrounded()
     {
         RaycastHit2D rayhit = Physics2D.Raycast(col.bounds.center,Vector2.down,col.bounds.extents.y + .1f, ground);
         Debug.DrawRay(col.bounds.center, Vector2.down * (col.bounds.extents.y + .1f));
+        if (rayhit.collider != null)
+            jumps = 1;
+
         return rayhit.collider != null;
     }
 }

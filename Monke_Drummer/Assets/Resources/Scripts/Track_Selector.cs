@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Track_Selector : MonoBehaviour
 {
+    public string item0 = "";
     public string item1 = "";
     public string item2 = "";
     public string item3 = "";
@@ -12,6 +13,8 @@ public class Track_Selector : MonoBehaviour
     List<string> items_list;
 
     Text item_txt;
+
+    public uint default_item = 0;
 
     [SerializeField]
     private uint item = 0;
@@ -31,9 +34,17 @@ public class Track_Selector : MonoBehaviour
     {
         items_list = new List<string>();
         {
-            items_list.Add(item1);
-            items_list.Add(item2);
-            items_list.Add(item3);
+            if(item0 != "")
+            items_list.Add(item0);
+
+            if (item1 != "")
+                items_list.Add(item1);
+
+            if (item2 != "")
+                items_list.Add(item2);
+
+            if (item3 != "")
+                items_list.Add(item3);
         }
 
         item_txt = GetComponentInChildren<Text>();  //Display text will always be the first child with a text component
@@ -41,7 +52,7 @@ public class Track_Selector : MonoBehaviour
         if (TrackEvent != "")
         {
             track = FMODUnity.RuntimeManager.CreateInstance(TrackEvent);
-            track.setParameterByName("Harmony", 1);
+            track.setParameterByName("Harmony", 0);
             track.start();
             initial_time = Time.realtimeSinceStartup;
             track.release();
@@ -86,6 +97,11 @@ public class Track_Selector : MonoBehaviour
             item = 0;
         else
             item++;
+    }
+
+    private void OnDestroy()
+    {
+        track.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 
 }
