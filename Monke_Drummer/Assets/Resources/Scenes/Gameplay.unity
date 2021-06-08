@@ -1936,6 +1936,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4304363998666954693, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
         type: 3}
+      propertyPath: KickOneShot
+      value: event:/SFX_Events/Kick_Basic
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954693, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: HiHatOneShot
+      value: event:/SFX_Events/HiHat_Basic
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954693, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
+      propertyPath: SnareOneShot
+      value: event:/SFX_Events/Snare_Basic
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304363998666954693, guid: a7a7fcbf17c2c5d499ab3e71af918aab,
+        type: 3}
       propertyPath: ground.m_Bits
       value: 128
       objectReference: {fileID: 0}

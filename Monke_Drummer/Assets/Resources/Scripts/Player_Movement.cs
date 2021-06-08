@@ -26,6 +26,15 @@ public class Player_Movement : MonoBehaviour
     [FMODUnity.EventRef]
     public string HiHatEvent = "";
 
+    [FMODUnity.EventRef]
+    public string KickOneShot = "";
+
+    [FMODUnity.EventRef]
+    public string SnareOneShot = "";
+
+    [FMODUnity.EventRef]
+    public string HiHatOneShot = "";
+
     public int max_jumps = 3;
     int jumps = 0;
 
@@ -46,7 +55,7 @@ public class Player_Movement : MonoBehaviour
     {
         if(Keyboard.current.uKey.wasPressedThisFrame == true)
         {
-            FMODUnity.RuntimeManager.PlayOneShot(HiHatEvent, transform.position);
+            FMODUnity.RuntimeManager.PlayOneShot(HiHatOneShot, transform.position);
         }
     }
     private void FixedUpdate()
@@ -72,7 +81,7 @@ public class Player_Movement : MonoBehaviour
 
                 if (mov == Vector2.up)
                 {
-                    FMODUnity.RuntimeManager.PlayOneShot(KickEvent, transform.position);
+                    FMODUnity.RuntimeManager.PlayOneShot(KickOneShot, transform.position);
                     if (jumps < max_jumps)
                     {
                         jumps++;
@@ -81,7 +90,7 @@ public class Player_Movement : MonoBehaviour
                 }
                 else
                 {
-                    FMODUnity.RuntimeManager.PlayOneShot(SnareEvent, transform.position);
+                    FMODUnity.RuntimeManager.PlayOneShot(SnareOneShot, transform.position);
 
                     movement = jump_force * mov;
                 }
