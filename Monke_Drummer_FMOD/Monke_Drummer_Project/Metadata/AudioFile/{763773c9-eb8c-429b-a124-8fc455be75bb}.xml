@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{763773c9-eb8c-429b-a124-8fc455be75bb}">
+		<property name="assetPath">
+			<value>caixes-003.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.8496598639455781</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fefc9fd5-287d-4dc7-ba08-4b13fd09099c}</destination>
+		</relationship>
+	</object>
+</objects>

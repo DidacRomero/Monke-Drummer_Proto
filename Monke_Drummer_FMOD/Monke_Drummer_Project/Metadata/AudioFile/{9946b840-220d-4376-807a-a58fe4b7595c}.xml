@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{9946b840-220d-4376-807a-a58fe4b7595c}">
+		<property name="assetPath">
+			<value>hh-tancat3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.72304166666666669</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fefc9fd5-287d-4dc7-ba08-4b13fd09099c}</destination>
+		</relationship>
+	</object>
+</objects>

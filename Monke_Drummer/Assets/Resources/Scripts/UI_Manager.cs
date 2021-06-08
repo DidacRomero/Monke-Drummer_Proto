@@ -11,6 +11,11 @@ public class UI_Manager : MonoBehaviour
         
     }
 
+    private void OnDestroy()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -21,5 +26,10 @@ public class UI_Manager : MonoBehaviour
     {
         //Change the scene to gameplay scene
         SceneManager.LoadScene("Gameplay");
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
