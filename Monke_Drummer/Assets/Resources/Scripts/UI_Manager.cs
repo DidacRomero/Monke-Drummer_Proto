@@ -27,4 +27,9 @@ public class UI_Manager : MonoBehaviour
         //Change the scene to gameplay scene
         SceneManager.LoadScene("Gameplay");
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
